@@ -60,6 +60,8 @@ Load More Feature
 
 
 
+
+
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
@@ -85,7 +87,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 |Styling| H | 10hrs |
 |Research| M | 5hrs |
 |Debugging| M | 10hrs |
-|Total| 61hrs | 
+|Total| | 61hrs | 
 
 
 
