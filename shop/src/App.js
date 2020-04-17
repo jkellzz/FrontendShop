@@ -1,6 +1,11 @@
 import React from "react";
+import { Switch, Route, Link, Redirect } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
+import Home from "./components/home/home";
+import Upload from "./components/upload/upload";
+import HistoryComp from "./components/history/history";
+import Cart from "./components/cart/cart";
 
 function App() {
   return (
@@ -19,6 +24,16 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        <main>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/history" component={HistoryComp} />
+            <Route path="/upload" component={Upload} />
+            <Route path="cart" component={Cart} />
+          </Switch>
+        </main>
+      </div>
     </div>
   );
 }

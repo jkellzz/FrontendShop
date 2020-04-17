@@ -1,7 +1,7 @@
 import React from "react";
 
-function History() {
+function HistoryComp() {
   return <></>;
 }
 
-export default History;
+export default HistoryComp;
