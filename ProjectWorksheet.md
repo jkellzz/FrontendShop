@@ -32,7 +32,7 @@ Layout, MongoDB Connection
 
 Create Upload Product Page
 
-File Upload Component
+Form Upload Component
 
 Display Product Lists In the Landing Page
 
