@@ -13,10 +13,15 @@ Our group has decided to create an online shop that encompasses all aspects of t
 ## Wireframes
 
 - Wireframe: 
+
 Home Screen : https://res.cloudinary.com/dtzbye6dy/image/upload/v1587137898/IMG_1135_vntqqg.jpg
+
 Upload Product: https://res.cloudinary.com/dtzbye6dy/image/upload/v1587137898/IMG_1134_qiqd4d.jpg
+
 Product Description: https://res.cloudinary.com/dtzbye6dy/image/upload/v1587137898/IMG_1139_skwwnt.jpg
+
 Cart: https://res.cloudinary.com/dtzbye6dy/image/upload/v1587137892/IMG_1140_daiwhl.jpg
+
 History: https://res.cloudinary.com/dtzbye6dy/image/upload/v1587137892/IMG_1136_asbf5p.jpg
 
 
