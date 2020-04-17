@@ -1,7 +1,7 @@
 import React from "react";
 
 function Upload() {
-  return <></>;
+  return <>This is upload</>;
 }
 
 export default Upload;

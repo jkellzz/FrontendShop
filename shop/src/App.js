@@ -1,6 +1,5 @@
 import React from "react";
 import { Switch, Route, Link, Redirect } from "react-router-dom";
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/home/home";
 import Upload from "./components/upload/upload";
@@ -10,19 +9,18 @@ import Cart from "./components/cart/cart";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <nav>
+          <Link to="/">
+            <h1>Home</h1>
+          </Link>
+          <Link to="/history">
+            <h2>History</h2>
+          </Link>
+          <Link to="/upload">
+            <h2>Upload</h2>
+          </Link>
+        </nav>
       </header>
       <div>
         <main>
@@ -31,6 +29,7 @@ function App() {
             <Route path="/history" component={HistoryComp} />
             <Route path="/upload" component={Upload} />
             <Route path="cart" component={Cart} />
+            <Redirect to="/" />
           </Switch>
         </main>
       </div>
