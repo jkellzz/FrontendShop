@@ -8,7 +8,6 @@ import Cart from "./components/cart/cart";
 import { getAllItems } from "./services/api-helper";
 
 
-
 function App() {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
