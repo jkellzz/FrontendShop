@@ -9,6 +9,7 @@ import { getAllItems } from "./services/api-helper";
 
 import Search from "./components/search/search";
 import Products from "./components/Products/Products";
+import Description from "./components/description/description";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -52,6 +53,7 @@ function App() {
             <Route path="/history" component={HistoryComp} />
             <Route path="/upload" component={Upload} />
             <Route path="/cart" component={Cart} />
+            <Route path="/description/:item" component={Description} />
             <Redirect to="/" />
           </Switch>
         </main>
