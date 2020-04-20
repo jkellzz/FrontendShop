@@ -6,7 +6,7 @@ import Upload from "./components/upload/upload";
 import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
 import { getAllItems } from "./services/api-helper";
-
+import Description from "./components/description/description";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -50,6 +50,7 @@ function App() {
             <Route path="/history" component={HistoryComp} />
             <Route path="/upload" component={Upload} />
             <Route path="/cart" component={Cart} />
+            <Route path="/description/:item" component={Description} />
             <Redirect to="/" />
           </Switch>
         </main>
