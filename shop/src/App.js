@@ -36,7 +36,7 @@ function App() {
             <h2>History</h2>
           </Link>
           <Link to="/upload">
-            <h2>Upload</h2>
+            <h2>Sell</h2>
           </Link>
           <Link to="/cart">
             <h2>Cart</h2>
