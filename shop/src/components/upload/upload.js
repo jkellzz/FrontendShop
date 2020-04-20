@@ -17,7 +17,7 @@ function Upload() {
       <form className='radbut'>
         <div className="radio">
           <label>
-            <input type="radio" value="option1" checked={true} />
+            <input type="radio" value="option1" />
             New
           </label>
         </div>

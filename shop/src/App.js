@@ -26,7 +26,7 @@ function App() {
       <header className="container">
         <img
           className="logo"
-          src="https://res.cloudinary.com/dtzbye6dy/image/upload/v1587394009/Screen_Shot_2020-04-20_at_10.43.36_AM_ze9dul.png"
+          src="https://res.cloudinary.com/dtzbye6dy/image/upload/v1587414749/Screen_Shot_2020-04-20_at_4.29.41_PM_mmdbb0.png"
         />
         <nav className="Navbar">
           <Link to="/">
