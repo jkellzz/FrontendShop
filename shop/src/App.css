@@ -48,7 +48,6 @@
   margin: 0 0 0 .45em;
   width: 9%;
   mix-blend-mode: multiply;
-
 }
 
 .Navbar  {
@@ -58,7 +57,8 @@
 .Navbar a {
   display: block;
   padding: 1em;
-  color: white;
+  color: black;
+  text-decoration: none;
 }
 
 .Navbar a:hover {
