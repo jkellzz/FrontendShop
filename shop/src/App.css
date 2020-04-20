@@ -36,3 +36,48 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+* {padding: 0; margin: 0;}
+
+.container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+      background: gray;
+}
+
+.logo {
+  margin: 0 0 0 .45em;
+  width: 9%;
+  mix-blend-mode: multiply;
+
+}
+    .logo a {
+      color: rgb(28, 24, 22);
+    }
+
+    .logo, .navigation {
+        list-style: none;
+        text-transform: uppercase;
+    }
+
+    .logo a, .navigation a {
+        text-decoration: none;
+        letter-spacing: .45rem;
+    }
+
+.Navbar  {
+  display: flex;
+}
+
+.Navbar a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.Navbar a:hover {
+    background: #00ace6;
+}
