@@ -37,7 +37,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/history" component={HistoryComp} />
             <Route path="/upload" component={Upload} />
-            <Route path="cart" component={Cart} />
+            <Route path="/cart" component={Cart} />
             <Redirect to="/" />
           </Switch>
         </main>
