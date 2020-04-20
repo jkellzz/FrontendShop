@@ -37,10 +37,6 @@
   }
 }
 
-
-
-* {padding: 0; margin: 0;}
-
 .container  {
   display: flex;
   justify-content: space-between;
@@ -54,19 +50,6 @@
   mix-blend-mode: multiply;
 
 }
-    .logo a {
-      color: rgb(28, 24, 22);
-    }
-
-    .logo, .navigation {
-        list-style: none;
-        text-transform: uppercase;
-    }
-
-    .logo a, .navigation a {
-        text-decoration: none;
-        letter-spacing: .45rem;
-    }
 
 .Navbar  {
   display: flex;

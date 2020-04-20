@@ -5,6 +5,8 @@ import Home from "./components/home/home";
 import Upload from "./components/upload/upload";
 import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
+import Search from './components/search/search'
+import Products from './components/Products/Products'
 
 function App() {
   return (
@@ -39,6 +41,9 @@ function App() {
             <Redirect to="/" />
           </Switch>
         </main>
+        {/* this is where all routes after the title will start */}
+        <Search/>
+        <Products/>
       </div>
     </div>
   );
