@@ -9,8 +9,11 @@ import Cart from "./components/cart/cart";
 function App() {
   return (
     <div className="App">
-      <header className='container'>
-      <img className='logo' src='https://res.cloudinary.com/dtzbye6dy/image/upload/v1587394009/Screen_Shot_2020-04-20_at_10.43.36_AM_ze9dul.png'/>
+      <header className="container">
+        <img
+          className="logo"
+          src="https://res.cloudinary.com/dtzbye6dy/image/upload/v1587394009/Screen_Shot_2020-04-20_at_10.43.36_AM_ze9dul.png"
+        />
         <nav className="Navbar">
           <Link to="/">
             <h1>Home</h1>
@@ -20,6 +23,9 @@ function App() {
           </Link>
           <Link to="/upload">
             <h2>Upload</h2>
+          </Link>
+          <Link to="/cart">
+            <h2>Cart</h2>
           </Link>
         </nav>
       </header>
