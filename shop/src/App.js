@@ -7,9 +7,8 @@ import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
 import { getAllItems } from "./services/api-helper";
 
-import Search from './components/search/search'
-import Products from './components/Products/Products'
-
+import Search from "./components/search/search";
+import Products from "./components/Products/Products";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -56,9 +55,6 @@ function App() {
             <Redirect to="/" />
           </Switch>
         </main>
-        {/* this is where all routes after the title will start */}
-        <Search/>
-        <Products/>
       </div>
     </div>
   );
