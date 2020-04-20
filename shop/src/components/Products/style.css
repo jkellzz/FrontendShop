@@ -1,0 +1,8 @@
+.cardcontainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    padding: 2em;
+}
