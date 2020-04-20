@@ -1,0 +1,15 @@
+.radbut {
+    display: flex;
+    justify-content: center;
+    padding: 0 -em 0 0;
+}
+
+.sell {
+    width: 30%;
+    padding: 1em;
+}
+
+.submitbutton {
+    padding: 1em;
+    margin: 20px;
+}
