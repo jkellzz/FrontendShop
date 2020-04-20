@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route, Link, Redirect } from "react-router-dom";
 import "./App.css";
 import Home from "./components/home/home";
 import Upload from "./components/upload/upload";
 import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
+import { getAllItems } from "./services/api-helper";
 
 function App() {
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const makeCall = async () => {
+      const resp = await getAllItems();
+      setItems(resp);
+      setIsLoading(false);
+    };
+    makeCall();
+  }, []);
+
   return (
     <div className="App">
       <header className="container">
