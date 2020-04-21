@@ -1,5 +1,14 @@
 import React from "react";
 import "./style.css";
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCol,
+} from "mdbreact";
 import { Link } from "react-router-dom";
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
 
@@ -25,9 +34,8 @@ const Products = () => {
       description: "this is a product",
     },
   ];
-  let list = products.map((item) => {
+  let list = products.map((item, key) => {
     return (
-
       <MDBCol className="cardcontainer">
         <MDBCard className="card" style={{ width: "22rem" }}>
           <MDBCardImage className="img-fluid" src={item.picture} waves />
@@ -44,9 +52,9 @@ const Products = () => {
   });
 
   return (
-    <div>
-    <div>{list}</div>
-    </div>
+    <MDBCol className="cardcontainer">
+      <div>{list}</div>
+    </MDBCol>
   );
 };
 
