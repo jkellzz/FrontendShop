@@ -39,7 +39,7 @@ const Products = () => {
           <MDBCardBody>
             <MDBCardTitle>{item.title}</MDBCardTitle>
             <MDBCardTitle>{item.price}</MDBCardTitle>
-            <Link to={`/description/${item.description}`}>
+            <Link to={`/description/${item.title}`}>
             <MDBBtn className='moreinfo'>More Info</MDBBtn>
             </Link>
           </MDBCardBody>
