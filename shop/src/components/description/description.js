@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css'
 
 function Description(props) {
   const descriptions = props.products.map((item, key) => {
