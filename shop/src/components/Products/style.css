@@ -1,6 +1,8 @@
-.cardcontainer {  
+.cardcontainer { 
     display: flex;
-    flex: 1 1 1;
+    justify-content: space-evenly;
+    padding: 2em;
+    flex-wrap: wrap;
 }
 
 .moreinfo {
