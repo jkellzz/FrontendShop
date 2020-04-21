@@ -8,11 +8,19 @@ function Description(props) {
   console.log("props", props);
   console.log("itemDisplay", itemDisplay);
   return (
-    <div>
-      <h1>{itemDisplay[0].title}</h1>
+    <div><h1 className='prodetails'>Product Details</h1>
+    <div className='horizontal'>
       <img src={itemDisplay[0].picture} />
-      <p>{itemDisplay[0].description}</p>
+      <div className='vert'>
+      <h3>Product Title</h3>
+      <p>{itemDisplay[0].title}</p>
+      <h3>Price</h3>
       <p>{itemDisplay[0].price}</p>
+      <h3>Description</h3>
+      <p>{itemDisplay[0].description}</p>
+    </div>
+    </div>
+    <button className='submitbutton'>Add To Cart</button>
     </div>
   );
 }

@@ -4,3 +4,17 @@ table {
     text-align: center;
 
 }
+
+.takemeback {
+    background-color: lawngreen;
+    padding: 1em;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.desc {
+    width: 20%; 
+    word-wrap: none;
+}

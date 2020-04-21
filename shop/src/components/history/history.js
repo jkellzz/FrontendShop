@@ -4,17 +4,16 @@ import './style.css'
 function HistoryComp() {
   return (
     <div>
-      <h1>History</h1>
+      <h1>Viewing History</h1>
    
     <table>
     <thead>
-        <tr>
-            <th>Payment Id</th>
+        <tr className='under'>
+            <th>Product Title</th>
             <th>Price</th>
-            <th>Quantity</th>
-            <th>Date of Purchase</th>
+            <th className='desc'>Description</th>
+            <th>Take me back!</th>
         </tr>
-
         {/* <tbody>
 
           {props.user.userData && props.user.userData.history &&
@@ -28,7 +27,14 @@ function HistoryComp() {
             ))}
         </tbody> */}
     </thead>
-
+    <tbody>
+          <tr>
+            <td>Buzzer</td>
+            <td>$45</td>
+            <td className='desc'>Best buzzer EverBest buzzer EverBest buzzer Ever</td>
+            <td><button className='takemeback'>GO!</button></td>
+          </tr>
+        </tbody>
     {/* <tbody>
 
         {props.user.userData && props.user.userData.history &&
