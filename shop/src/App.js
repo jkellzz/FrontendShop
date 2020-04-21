@@ -7,6 +7,7 @@ import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
 import { getAllItems } from "./services/api-helper";
 import Description from "./components/description/description";
+import Products from "./components/Products/Products";
 
 function App() {
   const [items, setItems] = useState([]);
