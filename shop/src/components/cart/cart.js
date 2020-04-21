@@ -4,14 +4,14 @@ import './style.css'
 function Cart() {
   return (
     <div>
-      <h1>This is your Cart</h1>
+      <h1>Shopping Cart</h1>
       <div>
         <table>
           <thead>
               <tr>
                   <th>Product Title</th>
                   <th>Price</th>
-                  <th>Quantity</th>
+                  <th>Description</th>
                   <th>Remove</th>
               </tr>
 
@@ -28,6 +28,14 @@ function Cart() {
                   ))}
               </tbody> */}
           </thead>
+          <tbody>
+          <tr>
+            <td>Buzzer</td>
+            <td>$45</td>
+            <td className='desc'>Best buzzer EverBest buzzer EverBest buzzer Ever</td>
+            <td><button className='remove'>Remove</button></td>
+          </tr>
+        </tbody>
           </table>
           <button className='checkout'>Checkout</button>
       </div>

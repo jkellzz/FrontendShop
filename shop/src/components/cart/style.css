@@ -3,3 +3,9 @@
     border-radius: 10px;
     background-color: #61dafb;
 }
+
+.remove {
+    background-color: red;
+    padding: 1em;
+    border-radius: 10px;
+}
