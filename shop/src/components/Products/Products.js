@@ -1,32 +1,39 @@
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
-
+import {
+  MDBBtn,
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCol,
+} from "mdbreact";
 
 const Products = () => {
   const products = [
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title",
+      title: "Product Title 3",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 3",
     },
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title",
+      title: "Product Title 2",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 2 ",
     },
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title",
+      title: "Product Title 1",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 1",
     },
   ];
   let list = products.map((item, key) => {
     return (
+
         <MDBCard className="card" style={{ width: "22rem" }}>
           <MDBCardImage className="img-fluid" src={item.picture} waves />
           <MDBCardBody>
@@ -45,6 +52,7 @@ const Products = () => {
       {list}
     </MDBCol>
   );
+
 };
 
 export default Products;
