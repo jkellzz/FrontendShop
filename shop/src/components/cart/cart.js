@@ -1,5 +1,6 @@
 import React from "react";
-import './style.css'
+import "./style.css";
+import { Link } from "react-router-dom";
 
 function Cart() {
   return (
@@ -8,14 +9,14 @@ function Cart() {
       <div>
         <table>
           <thead>
-              <tr>
-                  <th>Product Title</th>
-                  <th>Price</th>
-                  <th>Description</th>
-                  <th>Remove</th>
-              </tr>
+            <tr>
+              <th>Product Title</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Remove</th>
+            </tr>
 
-              {/* <tbody>
+            {/* <tbody>
 
                 {props.user.userData && props.user.userData.history &&
                 props.user.userData.history.map(item => (
@@ -29,15 +30,21 @@ function Cart() {
               </tbody> */}
           </thead>
           <tbody>
-          <tr>
-            <td>Buzzer</td>
-            <td>$45</td>
-            <td className='desc'>Best buzzer EverBest buzzer EverBest buzzer Ever</td>
-            <td><button className='remove'>Remove</button></td>
-          </tr>
-        </tbody>
-          </table>
-          <button className='checkout'>Checkout</button>
+            <tr>
+              <td>Buzzer</td>
+              <td>$45</td>
+              <td className="desc">
+                Best buzzer EverBest buzzer EverBest buzzer Ever
+              </td>
+              <td>
+                <button className="remove">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <Link to="/checkout">
+          <button className="checkout">Checkout</button>
+        </Link>
       </div>
     </div>
   );

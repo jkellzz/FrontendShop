@@ -7,6 +7,7 @@ import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
 import { getAllItems } from "./services/api-helper";
 import Description from "./components/description/description";
+import Checkout from "./components/checkout/checkout";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -79,6 +80,7 @@ function App() {
                 <Description products={products} match={routerProps.match} />
               )}
             />
+            <Route path="/checkout" component={Checkout} />
             <Redirect to="/" />
           </Switch>
         </main>
