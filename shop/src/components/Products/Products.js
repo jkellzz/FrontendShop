@@ -1,6 +1,8 @@
 import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
+
 
 const Products = () => {
   const products = [
@@ -33,7 +35,7 @@ const Products = () => {
             <MDBCardTitle>{item.title}</MDBCardTitle>
             <MDBCardTitle>{item.price}</MDBCardTitle>
             <Link to={`/description/${item.description}`}>
-              <MDBBtn>More Info</MDBBtn>
+            <MDBBtn className='moreinfo'>More Info</MDBBtn>
             </Link>
           </MDBCardBody>
         </MDBCard>
@@ -42,7 +44,7 @@ const Products = () => {
   });
 
   return (
-    <div className='cardcontainer'>
+    <div>
     <div>{list}</div>
     </div>
   );

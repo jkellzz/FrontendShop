@@ -1,5 +1,6 @@
 .cardcontainer {  
     display: flex;
+    flex: 1 1 1;
 }
 
 .moreinfo {
@@ -8,8 +9,3 @@
     background-color: #61dafb;
 }
 
-.moreinfo a {
-    text-decoration: none;
-    font-size: larger;
-    color: black;
-}
