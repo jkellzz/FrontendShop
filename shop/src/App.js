@@ -7,7 +7,6 @@ import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
 import { getAllItems } from "./services/api-helper";
 import Description from "./components/description/description";
-import Products from "./components/Products/Products";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -29,19 +28,19 @@ function App() {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
       title: "Product Title",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 1",
     },
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
       title: "Product Title",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 2",
     },
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
       title: "Product Title",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 3",
     },
   ];
 

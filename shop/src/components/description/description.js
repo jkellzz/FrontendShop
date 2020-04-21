@@ -11,7 +11,7 @@ function Description(props) {
   return (
     <div>
       <h1>This is a Description</h1>
-      <p>{descriptions}</p>
+      {descriptions}
     </div>
   );
 }
