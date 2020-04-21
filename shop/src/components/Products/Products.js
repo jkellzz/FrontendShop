@@ -10,6 +10,8 @@ import {
   MDBCol,
 } from "mdbreact";
 import { Link } from "react-router-dom";
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCol } from 'mdbreact';
+
 
 const Products = () => {
   const products = [
@@ -34,16 +36,18 @@ const Products = () => {
   ];
   let list = products.map((item, key) => {
     return (
-      <MDBCard className="card" style={{ width: "22rem" }} key={key}>
-        <MDBCardImage className="img-fluid" src={item.picture} waves />
-        <MDBCardBody>
-          <MDBCardTitle>{item.title}</MDBCardTitle>
-          <MDBCardTitle>{item.price}</MDBCardTitle>
-          <Link to={`/description/${key}`}>
-            <MDBBtn>More Info</MDBBtn>
-          </Link>
-        </MDBCardBody>
-      </MDBCard>
+      <MDBCol className="cardcontainer">
+        <MDBCard className="card" style={{ width: "22rem" }}>
+          <MDBCardImage className="img-fluid" src={item.picture} waves />
+          <MDBCardBody>
+            <MDBCardTitle>{item.title}</MDBCardTitle>
+            <MDBCardTitle>{item.price}</MDBCardTitle>
+            <Link to={`/description/${item.description}`}>
+            <MDBBtn className='moreinfo'>More Info</MDBBtn>
+            </Link>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
     );
   });
 
