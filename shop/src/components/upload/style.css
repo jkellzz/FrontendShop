@@ -12,4 +12,7 @@
 .submitbutton {
     padding: 1em;
     margin: 20px;
+    background-color: #62DAFB;
+    color: black;
+    border-radius: 10px;
 }

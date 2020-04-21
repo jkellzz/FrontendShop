@@ -1,8 +1,15 @@
-.cardcontainer {
+.cardcontainer {  
     display: flex;
-    justify-content: space-evenly;
 }
 
-.card {
-    padding: 2em;
+.moreinfo {
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #61dafb;
+}
+
+.moreinfo a {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
 }

@@ -1,13 +1,4 @@
 import React from "react";
-import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCol,
-} from "mdbreact";
 import "./style.css";
 import { Link } from "react-router-dom";
 
@@ -49,7 +40,11 @@ const Products = () => {
     );
   });
 
-  return <div>{list}</div>;
+  return (
+    <div className="cardcontainer">
+      <div>{list}</div>
+    </div>
+  );
 };
 
 export default Products;
