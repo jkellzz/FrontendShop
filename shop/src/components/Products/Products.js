@@ -14,21 +14,21 @@ const Products = () => {
   const products = [
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title",
+      title: "Product Title 3",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 3",
     },
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title",
+      title: "Product Title 2",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 2 ",
     },
     {
       picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title",
+      title: "Product Title 1",
       price: "Price $$",
-      description: "this is a product",
+      description: "this is a product 1",
     },
   ];
   let list = products.map((item, key) => {
@@ -39,7 +39,7 @@ const Products = () => {
           <MDBCardBody>
             <MDBCardTitle>{item.title}</MDBCardTitle>
             <MDBCardTitle>{item.price}</MDBCardTitle>
-            <Link to={`/description/${item.description}`}>
+            <Link to={`/description/${item.title}`}>
               <MDBBtn className="moreinfo">More Info</MDBBtn>
             </Link>
           </MDBCardBody>
