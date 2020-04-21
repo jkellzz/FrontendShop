@@ -32,27 +32,25 @@ const Products = () => {
       description: "this is a product",
     },
   ];
-  let list = products.map((item) => {
+  let list = products.map((item, key) => {
     return (
-      <MDBCol className="cardcontainer">
-        <MDBCard className="card" style={{ width: "22rem" }}>
-          <MDBCardImage className="img-fluid" src={item.picture} waves />
-          <MDBCardBody>
-            <MDBCardTitle>{item.title}</MDBCardTitle>
-            <MDBCardTitle>{item.price}</MDBCardTitle>
-            <Link to={`/description/${item.description}`}>
-              <MDBBtn>More Info</MDBBtn>
-            </Link>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
+      <MDBCard className="card" style={{ width: "22rem" }} key={key}>
+        <MDBCardImage className="img-fluid" src={item.picture} waves />
+        <MDBCardBody>
+          <MDBCardTitle>{item.title}</MDBCardTitle>
+          <MDBCardTitle>{item.price}</MDBCardTitle>
+          <Link to={`/description/${key}`}>
+            <MDBBtn>More Info</MDBBtn>
+          </Link>
+        </MDBCardBody>
+      </MDBCard>
     );
   });
 
   return (
-    <div className="cardcontainer">
+    <MDBCol className="cardcontainer">
       <div>{list}</div>
-    </div>
+    </MDBCol>
   );
 };
 
