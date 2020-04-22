@@ -31,12 +31,8 @@ function Description(props) {
       <button className="submitbutton" onClick={() => itemAdded()}>
         Add To Cart
       </button>
-      <button className="editbutton">
-        Edit Post
-      </button>
-      <button className="deletebutton">
-        Delete Post
-      </button>
+      <button className="editbutton">Edit Post</button>
+      <button className="deletebutton">Delete Post</button>
     </div>
   );
 }
