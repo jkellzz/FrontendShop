@@ -22,29 +22,6 @@ function App() {
     makeCall();
   }, []);
 
-  // this is temporary
-
-  const products = [
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 1",
-      price: "Price $$",
-      description: "this is a product 1",
-    },
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 2",
-      price: "Price $$",
-      description: "this is a product 2",
-    },
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 3",
-      price: "Price $$",
-      description: "this is a product 3",
-    },
-  ];
-
   return (
     <div className="App">
       <header className="container">
@@ -75,9 +52,13 @@ function App() {
             <Route path="/upload" component={Upload} />
             <Route path="/cart" component={Cart} />
             <Route
-              path="/description/:item"
-              render={(routerProps) => (
-                <Description products={products} match={routerProps.match} />
+              path="/description/:id"
+              render={(routerProps, data) => (
+                <Description
+                  items={items}
+                  {...data}
+                  match={routerProps.match}
+                />
               )}
             />
             <Route path="/checkout" component={Checkout} />
