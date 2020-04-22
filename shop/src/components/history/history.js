@@ -1,5 +1,6 @@
 import React from "react";
 import './style.css'
+import Axios from 'axios'
 
 function HistoryComp() {
   return (
