@@ -37,7 +37,7 @@ function Checkout() {
         <p>Subtotal: <p className='cost'>$45</p></p>
         <p>Tax Added: <p className='cost'>$3.99</p></p>
         <h3 className='total'>Total: <p className='cost'>$49.99</p></h3>
-        <button className='shippingsave'>Click here to Submit Payment</button>
+        <button className='shippingsave'>Click HERE to Submit Payment</button>
       </form>
     </div>
     </div>
