@@ -5,11 +5,13 @@ import Home from "./components/home/home";
 import Upload from "./components/upload/upload";
 import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
-import { getAllItems } from "./services/api-helper";
+import { getAllItems, getAllReviews } from "./services/api-helper";
 import Description from "./components/description/description";
+import Checkout from "./components/checkout/checkout";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -21,28 +23,14 @@ function App() {
     makeCall();
   }, []);
 
-  // this is temporary
-
-  const products = [
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 1",
-      price: "Price $$",
-      description: "this is a product 1",
-    },
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 2",
-      price: "Price $$",
-      description: "this is a product 2",
-    },
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 3",
-      price: "Price $$",
-      description: "this is a product 3",
-    },
-  ];
+  useEffect(() => {
+    const makeCall = async () => {
+      const resp = await getAllReviews();
+      setReviews(resp);
+      setIsLoading(false);
+    };
+    makeCall();
+  }, []);
 
   return (
     <div className="App">
@@ -74,11 +62,16 @@ function App() {
             <Route path="/upload" component={Upload} />
             <Route path="/cart" component={Cart} />
             <Route
-              path="/description/:item"
+              path="/description/:id"
               render={(routerProps) => (
-                <Description products={products} match={routerProps.match} />
+                <Description
+                  items={items}
+                  reviews={reviews}
+                  match={routerProps.match}
+                />
               )}
             />
+            <Route path="/checkout" component={Checkout} />
             <Redirect to="/" />
           </Switch>
         </main>

@@ -11,10 +11,14 @@
     "mdb": "^0.1.0",
     "mdbreact": "^4.25.6",
     "react": "^16.13.1",
+    "react-credit-card-input": "^1.1.5",
+    "react-credit-cards": "^0.8.0",
     "react-dom": "^16.13.1",
+    "react-paypal-button": "^4.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-search-box": "^2.0.2"
+    "react-search-box": "^2.0.2",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

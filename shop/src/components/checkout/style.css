@@ -1,0 +1,63 @@
+.shipping {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 30%;
+    padding: 1em;
+    margin: 10px;
+    justify-content: space-evenly;
+}
+
+.shippingbox {
+    padding: 1em;
+}
+
+.shippingsave {
+    padding: 1em;
+    margin: 10px 0;
+    background-color: #62DAFB;
+    color: black;
+}
+
+.checkoutcontainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.billing {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 30%;
+    padding: 1em;
+    margin: 10px;
+}
+
+.billingbox {
+    padding: 1em;
+}
+
+.cartcart {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 20%;
+    padding: 1em;
+    margin: 10px;
+    background-color: lightgray;
+    text-align: left;
+}
+
+.carttitle {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.total {
+    border-top: 1px solid black;
+    text-align: left;
+}
+
+.cost {
+    text-align: right;
+}

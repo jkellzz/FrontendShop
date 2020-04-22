@@ -2,23 +2,13 @@ import React, { useState } from "react";
 import "./style.css";
 
 function Description(props) {
-  const itemDisplay = props.products.filter((item, key) => {
-    return item.title === props.match.params.item;
+  if (!props.items) {
+    return <></>;
+  }
+  const itemDisplay = props.items.filter((item, key) => {
+    return item._id === props.match.params.id;
   });
 
-  const [cart, setCart] = useState([]);
-  const [item, setItem] = useState(itemDisplay[0].description);
-
-  //this will add the item that is displayed to the cart
-
-  const addToCart = () => {
-    setCart = item.itemDisplay[0].description;
-    console.log("cart", cart);
-  };
-  console.log("item", cart);
-  //here will be a function that will send the cart to the actual cart component to render it.
-
-  //this is to alert the user that an item was added to the cart
   const itemAdded = () => {
     alert("item was added");
   };
@@ -26,20 +16,23 @@ function Description(props) {
     <div>
       <h1 className="prodetails">Product Details</h1>
       <div className="horizontal">
-        <img src={itemDisplay[0].picture} />
+        <img src={itemDisplay[0].img} />
         <div className="vert">
-          {addToCart}
-          <h3>Product Title</h3>
-          <p>{itemDisplay[0].title}</p>
-          <h3>Price</h3>
-          <p>{itemDisplay[0].price}</p>
-          <h3>Description</h3>
-          <p>{itemDisplay[0].description}</p>
+          <h3>Product Title:</h3>
+          <p>{itemDisplay[0].item}</p>
+          <h3>Price:</h3>
+          <p>${itemDisplay[0].price}</p>
+          <h3>Description:</h3>
+          <p>{itemDisplay[0].itemDescription}</p>
+          <h3>Reviews</h3>
+          <p>{itemDisplay[0].review[0].reviews}</p>
         </div>
       </div>
       <button className="submitbutton" onClick={() => addToCart()}>
         Add To Cart
       </button>
+      <button className="editbutton">Edit Post</button>
+      <button className="deletebutton">Delete Post</button>
     </div>
   );
 }

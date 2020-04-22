@@ -15,24 +15,11 @@ function Upload() {
       <br></br>
       <h5>Is your product...</h5>
       <form className='radbut'>
-        <div className="radio">
-          <label>
-            <input type="radio" value="option1" />
-            New
-          </label>
-        </div>
-        <div className="radio">
-          <label>
-            <input type="radio" value="option2" />
-            Mint Condition
-          </label>
-        </div>
-        <div className="radio">
-          <label>
-            <input type="radio" value="option3" />
-            Used
-          </label>
-        </div>
+        <select className="Condition" name="Condition">
+              <option value="New">New</option>       
+              <option value="Mint Condition">Mint Condition</option>
+              <option value="Used">Used</option>
+        </select>
       </form>
 
       <br></br>

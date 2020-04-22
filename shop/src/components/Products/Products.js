@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import {
@@ -9,42 +9,32 @@ import {
   MDBCardTitle,
   MDBCol,
 } from "mdbreact";
+import { getAllItems } from "../../services/api-helper";
 
 const Products = () => {
-  const products = [
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 1",
-      price: "Price $$",
-      description: "this is a product 1",
-    },
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 2",
-      price: "Price $$",
-      description: "this is a product 2",
-    },
-    {
-      picture: "https://mdbootstrap.com/img/Photos/Others/images/43.jpg",
-      title: "Product Title 3",
-      price: "Price $$",
-      description: "this is a product 3",
-    },
-  ];
-  let list = products.map((item, key) => {
-    return (
+  const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const makeAPICall = async () => {
+      const resp = await getAllItems();
+      setItems(resp);
+      setIsLoading(false);
+    };
+    makeAPICall();
+  }, []);
 
+  const list = items.map((item, key) => {
+    return (
       <MDBCard className="card" style={{ width: "22rem" }}>
-        <MDBCardImage className="img-fluid" src={item.picture} waves />
+        <MDBCardImage className="img-fluid" src={item.img} waves />
         <MDBCardBody>
-          <MDBCardTitle>{item.title}</MDBCardTitle>
-          <MDBCardTitle>{item.price}</MDBCardTitle>
-          <Link to={`/description/${item.title}`}>
+          <MDBCardTitle>{item.item}</MDBCardTitle>
+          <MDBCardTitle>${item.price}</MDBCardTitle>
+          <Link to={`/description/${item._id}`}>
             <MDBBtn className="moreinfo">More Info</MDBBtn>
           </Link>
         </MDBCardBody>
       </MDBCard>
-
     );
   });
 

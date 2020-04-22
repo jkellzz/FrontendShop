@@ -11,3 +11,7 @@
     background-color: #61dafb;
 }
 
+.img-fluid {
+    max-width: 500px;
+    max-height: 400px;
+}
