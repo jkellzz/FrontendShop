@@ -5,18 +5,28 @@ import Home from "./components/home/home";
 import Upload from "./components/upload/upload";
 import HistoryComp from "./components/history/history";
 import Cart from "./components/cart/cart";
-import { getAllItems } from "./services/api-helper";
+import { getAllItems, getAllReviews } from "./services/api-helper";
 import Description from "./components/description/description";
 import Checkout from "./components/checkout/checkout";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const makeCall = async () => {
       const resp = await getAllItems();
       setItems(resp);
+      setIsLoading(false);
+    };
+    makeCall();
+  }, []);
+
+  useEffect(() => {
+    const makeCall = async () => {
+      const resp = await getAllReviews();
+      setReviews(resp);
       setIsLoading(false);
     };
     makeCall();
@@ -53,10 +63,10 @@ function App() {
             <Route path="/cart" component={Cart} />
             <Route
               path="/description/:id"
-              render={(routerProps, data) => (
+              render={(routerProps) => (
                 <Description
                   items={items}
-                  {...data}
+                  reviews={reviews}
                   match={routerProps.match}
                 />
               )}
