@@ -12,6 +12,9 @@ function Description(props) {
   const itemAdded = () => {
     alert("item was added");
   };
+  const addToCart = () => {
+    alert("item was added");
+  };
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
