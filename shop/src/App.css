@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #62DAFB;
 }
 
 @keyframes App-logo-spin {
@@ -41,12 +41,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-      background: gray;
+      background: white;
+      border-bottom: 1px solid black;
 }
 
 .logo {
   margin: 0 0 0 .45em;
-  width: 9%;
+  width: 150px;
   mix-blend-mode: multiply;
 }
 
@@ -62,5 +63,5 @@
 }
 
 .Navbar a:hover {
-    background: #00ace6;
+    background: #62DAFB;
 }

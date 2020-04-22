@@ -1,0 +1,21 @@
+table {
+    width: 80%;
+    margin: 3rem auto;
+    text-align: center;
+
+}
+
+.takemeback {
+    background-color: lawngreen;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+.desc {
+    width: 20%; 
+    word-wrap: none;
+}
