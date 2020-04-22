@@ -24,7 +24,7 @@ function Description(props) {
           <h3>Product Title</h3>
           <p>{itemDisplay[0].item}</p>
           <h3>Price</h3>
-          <p>{itemDisplay[0].price}</p>
+          <p>${itemDisplay[0].price}</p>
           <h3>Description</h3>
           <p>{itemDisplay[0].itemDescription}</p>
         </div>

@@ -29,7 +29,7 @@ const Products = () => {
         <MDBCardImage className="img-fluid" src={item.img} waves />
         <MDBCardBody>
           <MDBCardTitle>{item.item}</MDBCardTitle>
-          <MDBCardTitle>$ {item.price}</MDBCardTitle>
+          <MDBCardTitle>${item.price}</MDBCardTitle>
           <Link to={`/description/${item._id}`}>
             <MDBBtn className="moreinfo">More Info</MDBBtn>
           </Link>
