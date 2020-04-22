@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import "./style.css";
 
 function Description(props) {
-  // const itemDisplay = props.products.filter((item, key) => {
-  //   return item.title === props.match.params.item;
-  // });
   if (!props.items) {
     return <></>;
   }
@@ -27,6 +24,8 @@ function Description(props) {
           <p>${itemDisplay[0].price}</p>
           <h3>Description</h3>
           <p>{itemDisplay[0].itemDescription}</p>
+          <h3>Reviews</h3>
+          <p>{itemDisplay[0].review[0].reviews}</p>
         </div>
       </div>
       <button className="submitbutton" onClick={() => itemAdded()}>
