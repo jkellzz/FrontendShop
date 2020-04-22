@@ -7,14 +7,15 @@ function Description(props) {
   });
 
   const [cart, setCart] = useState([]);
-  const [item, setItem] = useState([]);
+  const [item, setItem] = useState(itemDisplay[0].description);
 
   //this will add the item that is displayed to the cart
-  const addToCart = () => {
-    setItem = itemDisplay[0];
-    return <div>yes</div>;
-  };
 
+  const addToCart = () => {
+    setCart = item.itemDisplay[0].description;
+    console.log("cart", cart);
+  };
+  console.log("item", cart);
   //here will be a function that will send the cart to the actual cart component to render it.
 
   //this is to alert the user that an item was added to the cart
@@ -27,6 +28,7 @@ function Description(props) {
       <div className="horizontal">
         <img src={itemDisplay[0].picture} />
         <div className="vert">
+          {addToCart}
           <h3>Product Title</h3>
           <p>{itemDisplay[0].title}</p>
           <h3>Price</h3>
@@ -35,7 +37,7 @@ function Description(props) {
           <p>{itemDisplay[0].description}</p>
         </div>
       </div>
-      <button className="submitbutton" onClick={() => itemAdded()}>
+      <button className="submitbutton" onClick={() => addToCart()}>
         Add To Cart
       </button>
     </div>
