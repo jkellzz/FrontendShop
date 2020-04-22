@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 function Description(props) {
   const itemDisplay = props.products.filter((item, key) => {
     return item.title === props.match.params.item;
   });
-  console.log("props", props);
-  console.log("itemDisplay", itemDisplay);
+
+  const [cart, setCart] = useState([]);
+  const [item, setItem] = useState([]);
+
+  const itemAdded = () => {
+    alert("item was added");
+  };
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
@@ -21,7 +26,9 @@ function Description(props) {
           <p>{itemDisplay[0].description}</p>
         </div>
       </div>
-      <button className="submitbutton">Add To Cart</button>
+      <button className="submitbutton" onClick={() => itemAdded()}>
+        Add To Cart
+      </button>
     </div>
   );
 }
