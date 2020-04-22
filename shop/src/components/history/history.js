@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './style.css'
 import Axios from 'axios'
 
 function HistoryComp() {
+
+  const [History, setHistory] = useState([])
+
+  // useEffect(() => {
+  //   Axios.get('api/users/getHistory')
+  //   .then(res => {
+  //     if (res.data.success) {
+
+  //     }else{
+  //       alert('could not get history')
+  //     }
+  //   })
+  // }, [])
   return (
     <div>
       <h1>Viewing History</h1>
