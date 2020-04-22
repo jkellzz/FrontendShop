@@ -5,13 +5,12 @@ function Description(props) {
   // const itemDisplay = props.products.filter((item, key) => {
   //   return item.title === props.match.params.item;
   // });
+  if (!props.items) {
+    return <></>;
+  }
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
-  console.log("props", props);
-  console.log("itemDisplay", itemDisplay);
-  console.log("props.items", props.items);
-  // console.log("item image", props.items.reviews.img);
 
   const itemAdded = () => {
     alert("item was added");
@@ -19,7 +18,7 @@ function Description(props) {
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
-      {/* <div className="horizontal">
+      <div className="horizontal">
         <img src={itemDisplay[0].img} />
         <div className="vert">
           <h3>Product Title</h3>
@@ -29,7 +28,7 @@ function Description(props) {
           <h3>Description</h3>
           <p>{itemDisplay[0].itemDescription}</p>
         </div>
-      </div> */}
+      </div>
       <button className="submitbutton" onClick={() => itemAdded()}>
         Add To Cart
       </button>
