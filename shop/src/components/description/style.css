@@ -15,7 +15,8 @@
 .vert {
     display: flex;
     flex-direction: column;
-    padding: 1em; 
+    padding: 1em;
+    text-align: left; 
 }
 
 .submitbutton {
@@ -26,3 +27,18 @@
     border-radius: 10px;
 }
 
+.editbutton {
+    padding: 1em;
+    margin: 20px;
+    background-color: orange;
+    color: black;
+    border-radius: 10px;
+}
+
+.deletebutton {
+    padding: 1em;
+    margin: 20px;
+    background-color: red;
+    color: black;
+    border-radius: 10px;
+}

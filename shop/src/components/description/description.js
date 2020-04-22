@@ -21,16 +21,22 @@ function Description(props) {
       <div className="horizontal">
         <img src={itemDisplay[0].img} />
         <div className="vert">
-          <h3>Product Title</h3>
+          <h3>Product Title:</h3>
           <p>{itemDisplay[0].item}</p>
-          <h3>Price</h3>
+          <h3>Price:</h3>
           <p>${itemDisplay[0].price}</p>
-          <h3>Description</h3>
+          <h3>Description:</h3>
           <p>{itemDisplay[0].itemDescription}</p>
         </div>
       </div>
       <button className="submitbutton" onClick={() => itemAdded()}>
         Add To Cart
+      </button>
+      <button className="editbutton">
+        Edit Post
+      </button>
+      <button className="deletebutton">
+        Delete Post
       </button>
     </div>
   );
