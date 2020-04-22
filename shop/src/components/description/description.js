@@ -9,6 +9,15 @@ function Description(props) {
   const [cart, setCart] = useState([]);
   const [item, setItem] = useState([]);
 
+  //this will add the item that is displayed to the cart
+  const addToCart = () => {
+    setItem = itemDisplay[0];
+    return <div>yes</div>;
+  };
+
+  //here will be a function that will send the cart to the actual cart component to render it.
+
+  //this is to alert the user that an item was added to the cart
   const itemAdded = () => {
     alert("item was added");
   };
