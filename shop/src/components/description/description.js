@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { deleteItem } from '../../services/api-helper'
-// import { app } from '../../App'
 
 function Description(props) {
 
@@ -19,19 +18,19 @@ function Description(props) {
     console.log("cart", cart);
   };
 
+  function refreshPage(){ 
+        window.location.reload(); 
+    }
+
   const handleDelete = async(id) => {
         const json = await deleteItem(id)
         console.log('handleDelete - json', json)
           const itemsArr = items.filter( item => item._id !== id)
           setItems(itemsArr)
           refreshPage()
-            window.location.reload();
       }
 
-      function refreshPage(){ 
-        window.location.reload(); 
-    }
-
+      
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
