@@ -74,7 +74,9 @@ function App() {
             <Route path="/upload" component={Upload} />
             <Route
               path="/cart"
-              render={() => <Cart cart={cart} handleClick={removeFromCart} />}
+              render={(data) => (
+                <Cart cart={cart} {...data} handleClick={removeFromCart} />
+              )}
             />
             <Route
               path="/description/:id"

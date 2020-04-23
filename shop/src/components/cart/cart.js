@@ -3,11 +3,10 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 function Cart(props) {
-  console.log("props-Cart", props.cart);
+  console.log("props-Cart", props);
   return (
     <div>
-      <h1></h1>
-      {/* <h1>Shopping Cart</h1>
+      <h1>Shopping Cart</h1>
       <div>
         <table>
           <thead>
@@ -30,12 +29,12 @@ function Cart(props) {
                     </tr>
                   ))}
               </tbody> */}
-      {/* </thead>
+          </thead>
           <tbody>
             <tr>
-              <td>Buzzer</td>
-              <td>$45</td>
-              <td className="desc">Best buzzer Ever</td>
+              <td>{props.cart[0].item}</td>
+              <td>${props.cart[0].price}</td>
+              <td className="desc">{props.cart[0].itemDescription}</td>
               <td>
                 <button className="remove">Remove</button>
               </td>
@@ -44,8 +43,8 @@ function Cart(props) {
         </table>
         <Link to="/checkout">
           <button className="checkout">Checkout</button>
-        </Link> */}
-      {/* </div> */}
+        </Link>
+      </div>
       This is Cart
     </div>
   );
