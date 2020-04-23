@@ -10,7 +10,7 @@ export const getAllItems = async () => {
 };
 
 export const deleteItem = async (id) => {
-  const resp = await api.delete(`/description/${id}`);
+  const resp = await api.delete(`/items/${id}`);
   return resp.data;
 };
 
