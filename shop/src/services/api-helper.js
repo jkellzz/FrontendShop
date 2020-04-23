@@ -15,7 +15,9 @@ export const deleteItem = async (id) => {
 };
 
 export const updateReviews = async (id, reviews) => {
-  const resp = await api.put(`/items/${id}`, reviews);
+  console.log('id, reviews', id)
+  console.log('reviews', reviews)
+  const resp = await api.put(`/reviews/${id}`, reviews);
   return resp.data;
 };
 export const createItem = async (item) => {
