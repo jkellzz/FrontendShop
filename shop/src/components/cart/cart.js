@@ -64,7 +64,6 @@ function Cart(props) {
           <button className="checkout">Checkout</button>
         </Link>
       </div>
-      This is Cart
     </div>
   );
 }
