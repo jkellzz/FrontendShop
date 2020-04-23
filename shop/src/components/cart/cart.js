@@ -3,6 +3,7 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 function Cart() {
+
   return (
     <div>
       <h1>Shopping Cart</h1>
