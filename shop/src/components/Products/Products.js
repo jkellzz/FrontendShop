@@ -27,7 +27,7 @@ const Products = () => {
       setFiltered(resp);
     };
     makeAPICall();
-  }, [items]);
+  }, []);
 
   useEffect(() => {
     const searchResult = filtered.filter((results) =>

@@ -6,13 +6,11 @@ import {
   getAllReviews,
   updateReviews,
 } from "../../services/api-helper";
-
 function Description(props) {
   const [items, setItems] = useState([]);
   const [value, setValue] = useState();
   const [review, setReview] = useState([]);
   const [reviewId, setReviewId] = useState("");
-  
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
@@ -21,7 +19,6 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
     window.location.reload();
   }
 
-
   const handleDelete = async (id) => {
     const json = await deleteItem(id);
     console.log("handleDelete - json", json);
@@ -29,15 +26,12 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
     setItems(itemsArr);
     refreshPage();
   };
-
   const handleChange = (e) => {
     setValue(e.target.value);
     updateReview.reviews = e.target.value;
   };
-
   const handleUpdateReview = async (e) => {
     e.preventDefault();
-    
     console.log("update", updateReview);
     const json = await updateReviews(
       itemDisplay[0].review[0]._id,
@@ -47,7 +41,6 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
     setUpdateReview("");
     refreshPage();
   };
-
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
