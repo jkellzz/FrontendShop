@@ -44,14 +44,14 @@ Cart Page
 
 Remove From Cart Button
 
+Search Feature
+
 
     Post MVP:
 
 Payment with Paypal
 
 upload video
-
-Search Feature
 
 Filter By Price
 
