@@ -22,6 +22,7 @@ function Description(props) {
       }
 
       
+      
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
@@ -46,7 +47,7 @@ function Description(props) {
           Add To Cart
         </button>
       </Link>
-      <button onClick={refreshPage} className="editbutton">
+      <button className="editbutton">
         Edit Post
       </button>
       <Link to="/">

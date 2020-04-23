@@ -18,6 +18,10 @@ export const updateItem = async (id, item) => {
   const resp = await api.put(`/items/${id}`, item);
   return resp.data;
 };
+export const createItem = async (item) => {
+  const resp = await api.post('/items', item)
+  return resp.data
+}
 
 export const getAllReviews = async () => {
   const resp = await api.get("/reviews");
