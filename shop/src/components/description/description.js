@@ -15,13 +15,6 @@ function Description(props) {
     console.log("handleDelete - json", json);
     const itemsArr = items.filter((item) => item._id !== id);
     setItems(itemsArr);
-  };
-
-  const handleDelete = async (id) => {
-    const json = await deleteItem(id);
-    console.log("handleDelete - json", json);
-    const itemsArr = items.filter((item) => item._id !== id);
-    setItems(itemsArr);
     refreshPage();
     window.location.reload();
   };
