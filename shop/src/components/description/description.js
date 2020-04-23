@@ -5,6 +5,7 @@ import { deleteItem } from '../../services/api-helper'
 
 function Description(props) {
   const [items, setItems] = useState([]);
+  const [value, setValue] =useState()
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
@@ -21,8 +22,19 @@ function Description(props) {
           refreshPage()
       }
 
+      const handleChange = e => {
+        setValue(e.target.value);
+      };
+      const reset = () => {
+        setValue("");
+      };
       
-      
+      const handleSubmit = e => {
+        e.preventDefault();
+        itemDisplay(value);
+        reset();
+      };
+
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
