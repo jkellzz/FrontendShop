@@ -7,11 +7,11 @@ function Description(props) {
     return item._id === props.match.params.id;
   });
 
-  let [cart, setCart] = useState([]);
+  let [cart, setCart] = useState("");
 
   const addToCart = () => {
     alert("item was added");
-    setCart = itemDisplay[0].itemDescription;
+    setCart = itemDisplay[0];
     console.log("cart", cart);
   };
 
@@ -32,6 +32,7 @@ function Description(props) {
           <p>{itemDisplay[0].review[0].reviews}</p>
         </div>
       </div>
+
       <Link to="/cart">
         <button className="submitbutton" onClick={() => addToCart()}>
           Add To Cart
