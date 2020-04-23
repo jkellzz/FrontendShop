@@ -2,7 +2,8 @@ import React from "react";
 import "./style.css";
 import Products from "../Products/Products";
 
-function Home() {
+function Home(props) {
+  // console.log("props-Home", props);
   return (
     <div>
       <h1 className="title">
