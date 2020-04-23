@@ -27,11 +27,11 @@ const Products = () => {
       setFiltered(resp);
     };
     makeAPICall();
-  }, [items]);
+  }, []);
 
   useEffect(() => {
     const searchResult = filtered.filter((results) =>
-      results.item.toLowerCase().startsWith(result.toLowerCase())
+      results.item.toLowerCase().includes(result.toLowerCase())
     );
     setItems(searchResult);
   }, [result]);
