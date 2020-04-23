@@ -13,6 +13,18 @@ function App() {
   const [items, setItems] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+    console.log("cart", cart);
+  };
+
+  const removeFromCart = (index) => {
+    let newProducts = [...cart];
+    newProducts.splice(index, 1);
+    setCart(newProducts);
+  };
 
   useEffect(() => {
     const makeCall = async () => {
@@ -60,7 +72,10 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/history" component={HistoryComp} />
             <Route path="/upload" component={Upload} />
-            <Route path="/cart" component={Cart} />
+            <Route
+              path="/cart"
+              render={() => <Cart cart={cart} handleClick={removeFromCart} />}
+            />
             <Route
               path="/description/:id"
               render={(routerProps) => (
@@ -68,6 +83,7 @@ function App() {
                   items={items}
                   reviews={reviews}
                   match={routerProps.match}
+                  handleAdd={addToCart}
                 />
               )}
             />

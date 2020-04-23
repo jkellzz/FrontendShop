@@ -2,9 +2,11 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-function Cart() {
+function Cart(props) {
+  console.log("props-Cart", props.cart);
   return (
     <div>
+      <h1></h1>
       {/* <h1>Shopping Cart</h1>
       <div>
         <table>

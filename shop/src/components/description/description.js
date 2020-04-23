@@ -10,14 +10,6 @@ function Description(props) {
     return item._id === props.match.params.id;
   });
 
-  let [cart, setCart] = useState();
-
-  const addToCart = () => {
-    alert("item was added");
-    setCart = itemDisplay[0].itemDescription;
-    console.log("cart", cart);
-  };
-
   const handleDelete = async (id) => {
     const json = await deleteItem(id);
     console.log("handleDelete - json", json);
@@ -42,7 +34,10 @@ function Description(props) {
         </div>
       </div>
       <Link to="/cart">
-        <button className="submitbutton" onClick={() => props.handleAdd()}>
+        <button
+          className="submitbutton"
+          onClick={() => props.handleAdd(itemDisplay[0])}
+        >
           Add To Cart
         </button>
       </Link>
