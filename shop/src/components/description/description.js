@@ -21,6 +21,7 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
     window.location.reload();
   }
 
+  
   const handleDelete = async (id) => {
     const json = await deleteItem(id);
     console.log("handleDelete - json", json);
