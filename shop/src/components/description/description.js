@@ -38,7 +38,7 @@ function Description(props) {
           <h3>Description:</h3>
           <p>{itemDisplay[0].itemDescription}</p>
           <h3>Reviews:</h3>
-          <p>{itemDisplay[0].review[0].reviews}</p>
+          <p>{itemDisplay[0].review[0] ? itemDisplay[0].review[0].reviews : 'No reviews.'}</p>
         </div>
       </div>
       <Link to="/cart">
