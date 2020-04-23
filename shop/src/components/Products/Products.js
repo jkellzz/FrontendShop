@@ -14,14 +14,27 @@ import { getAllItems } from "../../services/api-helper";
 const Products = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [filtered, setFiltered] = useState([])
+  const [result, setResult] = useState('')
+
   useEffect(() => {
     const makeAPICall = async () => {
       const resp = await getAllItems();
       setItems(resp);
       setIsLoading(false);
+      setFiltered(resp)
     };
     makeAPICall();
   }, []);
+
+  useEffect(() => {
+    const searchResult = filtered.filter(results => results.item.toLowerCase().includes(result.toLowerCase()))
+    setItems(searchResult)
+  }, [result])
+
+  const onChange = e => {
+    setResult(e.target.value)
+  }
 
   const list = items.map((item, key) => {
     return (
@@ -38,7 +51,19 @@ const Products = () => {
     );
   });
   
-  return <MDBCol className="cardcontainer">{list}</MDBCol>;
+  return (
+    <div>
+      <div>
+        <input
+          type='text'
+          placeholder='Search here...'
+          value={result}
+          onChange={onChange}
+        />
+        <MDBCol className="cardcontainer">{list}</MDBCol>
+      </div>
+    </div>
+  )
 };
 
 export default Products;

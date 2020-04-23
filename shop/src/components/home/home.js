@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import Products from "../Products/Products";
-import Search from "../search/search";
 
 function Home() {
   return (
@@ -14,7 +13,6 @@ function Home() {
         />{" "}
         away...
       </h1>
-      <Search />
       <Products />
     </div>
   );
