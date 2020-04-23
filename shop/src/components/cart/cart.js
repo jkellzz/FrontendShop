@@ -46,9 +46,7 @@ function Cart() {
             <tr>
               <td>Buzzer</td>
               <td>$45</td>
-              <td className="desc">
-                Best buzzer EverBest buzzer EverBest buzzer Ever
-              </td>
+              <td className="desc">Best buzzer Ever</td>
               <td>
                 <button className="remove">Remove</button>
               </td>

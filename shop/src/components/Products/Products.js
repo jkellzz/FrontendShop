@@ -25,7 +25,7 @@ const Products = () => {
 
   const list = items.map((item, key) => {
     return (
-      <MDBCard className="card" style={{ width: "22rem" }}>
+      <MDBCard className="card" style={{ width: "22rem" }} key={key}>
         <MDBCardImage className="img-fluid" src={item.img} waves />
         <MDBCardBody>
           <MDBCardTitle>{item.item}</MDBCardTitle>
