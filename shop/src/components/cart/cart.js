@@ -40,6 +40,9 @@ function Cart(props) {
         <Link to="/checkout">
           <button className="checkout">Checkout</button>
         </Link>
+        <div>
+          <td></td>
+        </div>
       </div>
     </div>
   );
