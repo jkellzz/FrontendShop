@@ -37,7 +37,7 @@ const Products = () => {
       </MDBCard>
     );
   });
-
+  
   return <MDBCol className="cardcontainer">{list}</MDBCol>;
 };
 
