@@ -7,12 +7,12 @@ function Description(props) {
     return item._id === props.match.params.id;
   });
 
-  let [cart, setCart] = useState(itemDisplay[0]);
+  let [cart, setCart] = useState();
 
   const addToCart = () => {
     alert("item was added");
     setCart = itemDisplay[0].itemDescription;
-    console.log(cart);
+    console.log("cart", cart);
   };
 
   return (
