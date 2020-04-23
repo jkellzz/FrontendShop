@@ -2,10 +2,10 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-function Cart() {
+function Cart(props) {
   return (
     <div>
-      <h1>Shopping Cart</h1>
+      {/* <h1>Shopping Cart</h1>
       <div>
         <table>
           <thead>
@@ -28,7 +28,7 @@ function Cart() {
                     </tr>
                   ))}
               </tbody> */}
-          </thead>
+      {/* </thead>
           <tbody>
             <tr>
               <td>Buzzer</td>
@@ -42,8 +42,9 @@ function Cart() {
         </table>
         <Link to="/checkout">
           <button className="checkout">Checkout</button>
-        </Link>
-      </div>
+        </Link> */}
+      {/* </div> */}
+      This is Cart
     </div>
   );
 }

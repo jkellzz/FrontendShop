@@ -3,7 +3,8 @@ import "./style.css";
 import Products from "../Products/Products";
 import Search from "../search/search";
 
-function Home() {
+function Home(props) {
+  // console.log("props-Home", props);
   return (
     <div>
       <h1 className="title">

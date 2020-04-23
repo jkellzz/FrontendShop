@@ -6,16 +6,7 @@ function Description(props) {
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
-
-  let [cart, setCart] = useState("");
-
-  const addToCart = () => {
-    alert("item was added");
-    setCart = itemDisplay[0];
-    console.log("cart", cart);
-  };
-
-  console.log("cart", cart);
+  console.log("props- description", props);
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
@@ -34,7 +25,7 @@ function Description(props) {
       </div>
 
       <Link to="/cart">
-        <button className="submitbutton" onClick={() => addToCart()}>
+        <button className="submitbutton" onClick={() => props.handleAdd()}>
           Add To Cart
         </button>
       </Link>
