@@ -10,8 +10,6 @@ function Upload() {
       <input className="sell" type="text" placeholder="URL to product Image" />
       <br></br>
       <input className="sell" type="text" placeholder="What is your product?" />
-      <br></br>
-
       {/* <br></br>
       <input className="sell" type="text" placeholder="Price" />
       <br></br>
