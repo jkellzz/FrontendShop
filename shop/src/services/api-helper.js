@@ -10,9 +10,11 @@ export const getAllItems = async () => {
 };
 
 export const deleteItem = async (id) => {
-  const resp = await api.delete(`/cart/${id}`);
+  const resp = await api.delete(`/description/${id}`);
   return resp.data;
 };
+
+
 
 export const getAllReviews = async () => {
   const resp = await api.get("/reviews");

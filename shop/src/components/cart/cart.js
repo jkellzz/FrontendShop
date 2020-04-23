@@ -3,6 +3,19 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 function Cart() {
+
+//   const removeFromCart = (productId) => {
+
+//     dispatch(removeCartItem(productId))
+//         .then((response) => {
+//             if (response.payload.cartDetail.length <= 0) {
+//                 setShowTotal(false)
+//             } else {
+//                 calculateTotal(response.payload.cartDetail)
+//             }
+//         })
+// }
+
   return (
     <div>
       <h1>Shopping Cart</h1>

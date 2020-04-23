@@ -1,14 +1,27 @@
 import React, { useState } from "react";
 import "./style.css";
-
+import { deleteItem } from "../../services/api-helper"
 
 function Description(props) {
+  const [items, setItems] = useState([])
+
   if (!props.items) {
     return <></>;
   }
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
+
+  
+
+  const handleDelete = async(id) => {
+    const json = await deleteItem(id)
+    console.log('handleDelete - json', json)
+    if(json.status == 'success'){
+      const itemsArr = items.filter( item => item._id !== id)
+      setItems(itemsArr)
+    }
+  }
 
   const itemAdded = () => {
     alert("item was added");
@@ -35,7 +48,7 @@ function Description(props) {
       <button className="editbutton">
         Edit Post
       </button>
-      <button className="deletebutton">
+      <button onClick={handleDelete} className="deletebutton">
         Delete Post
       </button>
     </div>
