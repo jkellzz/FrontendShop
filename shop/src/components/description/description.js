@@ -17,6 +17,18 @@ function Description(props) {
     setItems(itemsArr);
   };
 
+  const handleDelete = async (id) => {
+    const json = await deleteItem(id);
+    console.log("handleDelete - json", json);
+    const itemsArr = items.filter((item) => item._id !== id);
+    setItems(itemsArr);
+    refreshPage();
+    window.location.reload();
+  };
+
+  function refreshPage() {
+    window.location.reload();
+  }
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
@@ -41,7 +53,9 @@ function Description(props) {
           Add To Cart
         </button>
       </Link>
-      <button className="editbutton">Edit Post</button>
+      <button onClick={refreshPage} className="editbutton">
+        Edit Post
+      </button>
       <Link to="/">
         <button
           onClick={() => handleDelete(itemDisplay[0]._id)}
