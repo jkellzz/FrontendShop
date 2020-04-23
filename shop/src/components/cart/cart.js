@@ -21,16 +21,6 @@ function Cart(props) {
       </tbody>
     );
   });
-  //   <tbody>
-  //   <tr>
-  //     <td>{props.cart[0].item}</td>
-  //     <td>${props.cart[0].price}</td>
-  //     <td className="desc">{props.cart[0].itemDescription}</td>
-  //     <td>
-  //       <button className="remove">Remove</button>
-  //     </td>
-  //   </tr>
-  // </tbody>
 
   return (
     <div>
@@ -44,19 +34,6 @@ function Cart(props) {
               <th>Description</th>
               <th>Remove</th>
             </tr>
-
-            {/* <tbody>
-
-                {props.user.userData && props.user.userData.history &&
-                props.user.userData.history.map(item => (
-                    <tr key={item.id}>
-                        <td>{item.id}</td>
-                        <td>{item.price}</td>
-                        <td>{item.quantity}</td>
-                        <td>{item.dateOfPurchase}</td>
-                    </tr>
-                  ))}
-              </tbody> */}
           </thead>
           {things}
         </table>

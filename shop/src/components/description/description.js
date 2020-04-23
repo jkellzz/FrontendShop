@@ -6,6 +6,9 @@ import { deleteItem } from "../../services/api-helper";
 
 function Description(props) {
   const [items, setItems] = useState([]);
+  if (!props.items) {
+    return <div></div>;
+  }
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
