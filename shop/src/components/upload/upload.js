@@ -57,7 +57,10 @@ function Upload() {
         onChange={handleImgChange}
         value={imgURL}
       />
+<<<<<<< HEAD
+=======
 
+>>>>>>> ce40c9ba4aba35d73bac0b97557c5e18a9f1dc5c
       <br></br>
       <input 
         className="sell" 
@@ -75,7 +78,10 @@ function Upload() {
         value={price}
       />
       <br></br>
+<<<<<<< HEAD
+=======
 
+>>>>>>> ce40c9ba4aba35d73bac0b97557c5e18a9f1dc5c
       <h5>Is your product...</h5>
 
         <select 
@@ -89,7 +95,10 @@ function Upload() {
           <option value="Used">Used</option>
         </select>
     
+<<<<<<< HEAD
+=======
 
+>>>>>>> ce40c9ba4aba35d73bac0b97557c5e18a9f1dc5c
       <br></br>
       <input 
         className="sell" 
