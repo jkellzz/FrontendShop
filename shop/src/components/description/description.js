@@ -6,6 +6,9 @@ import { deleteItem } from "../../services/api-helper";
 
 function Description(props) {
   const [items, setItems] = useState([]);
+  if (!props.items) {
+    return <div></div>;
+  }
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
@@ -34,8 +37,20 @@ function Description(props) {
           <p>${itemDisplay[0].price}</p>
           <h3>Description:</h3>
           <p>{itemDisplay[0].itemDescription}</p>
+          <h3>Condition:</h3>
+          <p>{itemDisplay[0].condition}</p>
           <h3>Reviews:</h3>
-          <p>{itemDisplay[0].review[0] ? itemDisplay[0].review[0].reviews : 'No reviews.'}</p>
+          <p>
+            {itemDisplay[0].review[0]
+              ? itemDisplay[0].review[0].reviews
+              : "No reviews."}
+          </p>
+          <h3>Rating: out of 5</h3>
+          <p>
+            {itemDisplay[0].review[0]
+              ? itemDisplay[0].review[0].rating
+              : "No rating yet."}
+          </p>
         </div>
       </div>
       <Link to="/cart">
