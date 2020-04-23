@@ -1,27 +1,45 @@
 import React, { useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { deleteItem } from "../../services/api-helper";
-// import { app } from '../../App'
-
+import {
+  deleteItem,
+  getAllReviews,
+  updateReviews,
+} from "../../services/api-helper";
 function Description(props) {
   const [items, setItems] = useState([]);
+  const [value, setValue] = useState();
+  const [review, setReview] = useState([]);
+  const [reviewId, setReviewId] = useState("");
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
-
+const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
+  function refreshPage() {
+    window.location.reload();
+  }
   const handleDelete = async (id) => {
     const json = await deleteItem(id);
     console.log("handleDelete - json", json);
     const itemsArr = items.filter((item) => item._id !== id);
     setItems(itemsArr);
     refreshPage();
-    window.location.reload();
   };
-
-  function refreshPage() {
-    window.location.reload();
-  }
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    updateReview.reviews = e.target.value;
+  };
+  const handleUpdateReview = async (e) => {
+    e.preventDefault();
+    console.log("update", updateReview);
+    const json = await updateReviews(
+      itemDisplay[0].review[0]._id,
+      updateReview
+    );
+    console.log("Reviews - handleUpdateReview - json", json);
+    setUpdateReview("");
+    // refreshPage();
+  };
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
@@ -35,20 +53,28 @@ function Description(props) {
           <h3>Description:</h3>
           <p>{itemDisplay[0].itemDescription}</p>
           <h3>Reviews:</h3>
-          <p>{itemDisplay[0].review[0] ? itemDisplay[0].review[0].reviews : 'No reviews.'}</p>
+          <p>
+            {itemDisplay[0].review[0]
+              ? itemDisplay[0].review[0].reviews
+              : "No reviews."}
+          </p>
         </div>
       </div>
       <Link to="/cart">
         <button
           className="submitbutton"
-          onClick={() => props.handleAdd(itemDisplay[0])}
-        >
+          onClick={() => props.handleAdd(itemDisplay[0])}>
           Add To Cart
         </button>
       </Link>
-      <button onClick={refreshPage} className="editbutton">
-        Edit Post
-      </button>
+      <form>
+        <label>Edit Review</label>
+        <br />
+        <input type="text" value={value} onChange={handleChange} />
+        <button onClick={handleUpdateReview, refreshPage} className="editbutton">
+          Edit Reviews
+        </button>
+      </form>
       <Link to="/">
         <button
           onClick={() => handleDelete(itemDisplay[0]._id)}
