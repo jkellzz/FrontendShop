@@ -49,7 +49,9 @@ function Description(props) {
         </button>
       </Link>
       <button className="editbutton">Edit Post</button>
+      <Link to="/">
       <button onClick={() => handleDelete(itemDisplay[0]._id)} className="deletebutton">Delete Post</button>
+      </Link>
     </div>
   );
 }
