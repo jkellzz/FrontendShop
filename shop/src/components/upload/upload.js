@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
-import { createItem } from "../../services/api-helper";
+import {createItem} from '../../services/api-helper'
+import {Link} from 'react-router-dom'
 
 function Upload() {
   const [itemName, setItemName] = useState("");
@@ -86,16 +87,16 @@ function Upload() {
           <option value="Mint Condition">Mint Condition</option>
           <option value="Used">Used</option>
         </select>
-
-        <br></br>
-        <input
-          className="sell"
-          type="text"
-          placeholder="Product Description"
-          onChange={handleDescriptionChange}
-          value={description}
-        />
-        <br></br>
+    
+      <br></br>
+      <input 
+        className="sell" 
+        type="text" 
+        placeholder="Product Description"
+        onChange={handleDescriptionChange}
+        value={description}
+      />
+      <br></br>
         <button className="submitbutton">Submit</button>
       </form>
     </div>
