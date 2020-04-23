@@ -18,6 +18,7 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
   function refreshPage() {
     window.location.reload();
   }
+
   const handleDelete = async (id) => {
     const json = await deleteItem(id);
     console.log("handleDelete - json", json);
@@ -38,7 +39,7 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
     );
     console.log("Reviews - handleUpdateReview - json", json);
     setUpdateReview("");
-    // refreshPage();
+    refreshPage();
   };
   return (
     <div>
@@ -71,7 +72,7 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
         <label>Edit Review</label>
         <br />
         <input type="text" value={value} onChange={handleChange} />
-        <button onClick={handleUpdateReview, refreshPage} className="editbutton">
+        <button onClick={handleUpdateReview} className="editbutton">
           Edit Reviews
         </button>
       </form>
