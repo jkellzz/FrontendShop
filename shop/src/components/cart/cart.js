@@ -4,6 +4,34 @@ import { Link } from "react-router-dom";
 
 function Cart(props) {
   console.log("props-Cart", props);
+
+  let things = props.cart.map((x, y) => {
+    return (
+      <tbody>
+        <tr>
+          <td>{x.item}</td>
+          <td>${x.price}</td>
+          <td className="desc">{x.itemDescription}</td>
+          <td>
+            <button className="remove" onClick={() => props.handleClick(y)}>
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    );
+  });
+  //   <tbody>
+  //   <tr>
+  //     <td>{props.cart[0].item}</td>
+  //     <td>${props.cart[0].price}</td>
+  //     <td className="desc">{props.cart[0].itemDescription}</td>
+  //     <td>
+  //       <button className="remove">Remove</button>
+  //     </td>
+  //   </tr>
+  // </tbody>
+
   return (
     <div>
       <h1>Shopping Cart</h1>
@@ -30,22 +58,12 @@ function Cart(props) {
                   ))}
               </tbody> */}
           </thead>
-          <tbody>
-            <tr>
-              <td>{props.cart[0].item}</td>
-              <td>${props.cart[0].price}</td>
-              <td className="desc">{props.cart[0].itemDescription}</td>
-              <td>
-                <button className="remove">Remove</button>
-              </td>
-            </tr>
-          </tbody>
+          {things}
         </table>
         <Link to="/checkout">
           <button className="checkout">Checkout</button>
         </Link>
       </div>
-      This is Cart
     </div>
   );
 }
