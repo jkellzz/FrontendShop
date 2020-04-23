@@ -57,6 +57,7 @@ function Upload() {
         onChange={handleImgChange}
         value={imgURL}
       />
+
       <br></br>
       <input 
         className="sell" 
@@ -74,6 +75,7 @@ function Upload() {
         value={price}
       />
       <br></br>
+
       <h5>Is your product...</h5>
 
         <select 
@@ -87,6 +89,7 @@ function Upload() {
           <option value="Used">Used</option>
         </select>
     
+
       <br></br>
       <input 
         className="sell" 
