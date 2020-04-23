@@ -12,7 +12,7 @@ function Upload() {
       <input className='sell' type="text" placeholder="What is your product?" />
       <br></br>
       <input className='sell' type="text" placeholder="Price" />
-      <br></br>
+      {/* <br></br>
       <h5>Is your product...</h5>
       <form className='radbut'>
         <select className="Condition" name="Condition">
@@ -20,7 +20,7 @@ function Upload() {
               <option value="Mint Condition">Mint Condition</option>
               <option value="Used">Used</option>
         </select>
-      </form>
+      </form> */}
 
       <br></br>
       <input className='sell' type="text" placeholder="Product Description" />
