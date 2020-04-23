@@ -17,6 +17,8 @@ const Products = () => {
   const [filtered, setFiltered] = useState([]);
   const [result, setResult] = useState("");
 
+  console.log('Products - items', items)
+
   useEffect(() => {
     const makeAPICall = async () => {
       const resp = await getAllItems();
@@ -25,7 +27,7 @@ const Products = () => {
       setFiltered(resp);
     };
     makeAPICall();
-  }, []);
+  }, [items]);
 
   useEffect(() => {
     const searchResult = filtered.filter((results) =>
