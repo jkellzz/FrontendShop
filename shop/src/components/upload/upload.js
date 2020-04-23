@@ -7,7 +7,7 @@ function Upload() {
       <h1>Sell your Product</h1>
       <br></br>
       <h5>Please upload your product images...</h5>
-      <input className="sell" type="text" placeholder="URL to product Image" />
+      <input className="sell" type="text" placeholder="Product Image URL" />
       <br></br>
       <input className="sell" type="text" placeholder="What is your product?" />
       <br></br>
