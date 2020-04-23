@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function Description(props) {
-  if (!props.items) {
-    return <></>;
-  }
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
 
-  const itemAdded = () => {
+  let [cart, setCart] = useState(itemDisplay[0]);
+
+  const addToCart = () => {
     alert("item was added");
+    setCart = itemDisplay[0].itemDescription;
+    console.log(cart);
   };
+
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
@@ -28,9 +31,12 @@ function Description(props) {
           <p>{itemDisplay[0].review[0].reviews}</p>
         </div>
       </div>
-      <button className="submitbutton" onClick={() => itemAdded()}>
-        Add To Cart
-      </button>
+
+      <Link to="/cart">
+        <button className="submitbutton" onClick={() => addToCart()}>
+          Add To Cart
+        </button>
+      </Link>
       <button className="editbutton">Edit Post</button>
       <button className="deletebutton">Delete Post</button>
     </div>
