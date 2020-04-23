@@ -31,7 +31,7 @@ function Description(props) {
       
       const handleSubmit = e => {
         e.preventDefault();
-        itemDisplay(value);
+        setValue(value);
         reset();
       };
 
@@ -59,14 +59,18 @@ function Description(props) {
           Add To Cart
         </button>
       </Link>
-      <button className="editbutton">
+      <form onSubmit={handleSubmit}>
+        <label>Edit Review</label>
+        <br />
+        <input type="text" value={value} onChange={handleChange} />
+      {/* <button className="editbutton">
         Edit Post
-      </button>
+      </button> */}
+      </form>
       <Link to="/">
         <button
           onClick={() => handleDelete(itemDisplay[0]._id)}
-          className="deletebutton"
-        >
+          className="deletebutton">
           Delete Post
         </button>
       </Link>

@@ -40,7 +40,7 @@ function Upload() {
     })
     setItemName('')
     setImgUrl('')
-    setPrice()
+    setPrice('')
     setDescription('')
   }
 
