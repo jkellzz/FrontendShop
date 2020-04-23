@@ -40,7 +40,7 @@ function Upload() {
     });
     setItemName("");
     setImgUrl("");
-    setPrice();
+    setPrice("");
     setDescription("");
   };
 
@@ -75,6 +75,7 @@ function Upload() {
         />
         <br></br>
         <h5>Is your product...</h5>
+
         <select
           className="Condition"
           name="Condition"
@@ -85,6 +86,7 @@ function Upload() {
           <option value="Mint Condition">Mint Condition</option>
           <option value="Used">Used</option>
         </select>
+
         <br></br>
         <input
           className="sell"
