@@ -33,15 +33,6 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
     setValue(e.target.value);
     updateReview.reviews = e.target.value;
   };
-  const reset = () => {
-    setValue("");
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setValue(value);
-    reset();
-  };
 
   const handleUpdateReview = async (e) => {
     e.preventDefault();
@@ -52,9 +43,8 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
       updateReview
     );
     console.log("Reviews - handleUpdateReview - json", json);
-    // const res = await getAllReviews()
-    // setReview(res)
     setUpdateReview("");
+    // refreshPage();
   };
 
   return (
@@ -80,8 +70,7 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
       <Link to="/cart">
         <button
           className="submitbutton"
-          onClick={() => props.handleAdd(itemDisplay[0])}
-        >
+          onClick={() => props.handleAdd(itemDisplay[0])}>
           Add To Cart
         </button>
       </Link>
@@ -89,7 +78,7 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
         <label>Edit Review</label>
         <br />
         <input type="text" value={value} onChange={handleChange} />
-        <button onClick={handleUpdateReview} className="editbutton">
+        <button onClick={handleUpdateReview, refreshPage} className="editbutton">
           Edit Reviews
         </button>
       </form>
