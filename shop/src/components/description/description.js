@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { deleteItem } from '../../services/api-helper'
+import { deleteItem, getAllReviews, updateReviews } from '../../services/api-helper'
 
 function Description(props) {
   const [items, setItems] = useState([]);
-  const [value, setValue] =useState()
+  const [value, setValue] = useState()
+  const [review, setReview] = useState([])
+  const [reviewId, setReviewId] = useState('')
+  const [updateReview, setUpdateReview] = useState('')
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
@@ -35,6 +38,17 @@ function Description(props) {
         reset();
       };
 
+      const handleUpdateReview = async (e) => {
+        e.preventDefault()
+        const json = await updateReviews({
+            'review': updateReview
+        })
+        console.log('Reviews - handleUpdateReview - json', json)
+        // const res = await getAllReviews()
+        // setReview(res)
+        setUpdateReview('')
+    }
+
   return (
     <div>
       <h1 className="prodetails">Product Details</h1>
@@ -48,7 +62,7 @@ function Description(props) {
           <h3>Description:</h3>
           <p>{itemDisplay[0].itemDescription}</p>
           <h3>Reviews:</h3>
-          <p>{itemDisplay[0].review[0].reviews}</p>
+          <p>{itemDisplay[0].review[0] ? itemDisplay[0].review[0].reviews : 'No reviews.'}</p>
         </div>
       </div>
       <Link to="/cart">
@@ -63,9 +77,9 @@ function Description(props) {
         <label>Edit Review</label>
         <br />
         <input type="text" value={value} onChange={handleChange} />
-      {/* <button className="editbutton">
+      <button onClick={handleUpdateReview} className="editbutton">
         Edit Post
-      </button> */}
+      </button>
       </form>
       <Link to="/">
         <button
