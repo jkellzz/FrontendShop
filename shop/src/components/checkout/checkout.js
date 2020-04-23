@@ -34,9 +34,9 @@ function Checkout() {
       </form>
       <form className='cartcart'>
         <h2 className='carttitle'>Cart Summary</h2>
-        <p>Subtotal: <p className='cost'>$45</p></p>
-        <p>Tax Added: <p className='cost'>$3.99</p></p>
-        <h3 className='total'>Total: <p className='cost'>$49.99</p></h3>
+        <p>Subtotal: <p className='cost'>$</p></p>
+        <p>Tax Added: <p className='cost'>$</p></p>
+        <h3 className='total'>Total: <p className='cost'>$</p></h3>
         <button className='shippingsave'>Click HERE to Submit Payment</button>
       </form>
     </div>
