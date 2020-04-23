@@ -54,7 +54,7 @@ const Products = () => {
   return (
     <div>
       <div>
-        <input
+        <input className='searchform'
           type='text'
           placeholder='Search here...'
           value={result}
