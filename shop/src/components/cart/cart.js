@@ -2,8 +2,8 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-function Cart() {
-
+function Cart(props) {
+  console.log("props-Cart", props);
   return (
     <div>
       <h1>Shopping Cart</h1>
@@ -32,9 +32,9 @@ function Cart() {
           </thead>
           <tbody>
             <tr>
-              <td>Buzzer</td>
-              <td>$45</td>
-              <td className="desc">Best buzzer Ever</td>
+              <td>{props.cart[0].item}</td>
+              <td>${props.cart[0].price}</td>
+              <td className="desc">{props.cart[0].itemDescription}</td>
               <td>
                 <button className="remove">Remove</button>
               </td>
@@ -45,6 +45,7 @@ function Cart() {
           <button className="checkout">Checkout</button>
         </Link>
       </div>
+      This is Cart
     </div>
   );
 }
