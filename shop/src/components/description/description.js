@@ -4,19 +4,10 @@ import { Link } from "react-router-dom";
 import { deleteItem } from '../../services/api-helper'
 
 function Description(props) {
-
-  const [items, setItems] = useState([])
-     const itemDisplay = props.items.filter((item, key) => {
-      return item._id === props.match.params.id;
-    });
-
-  let [cart, setCart] = useState();
-
-  const addToCart = () => {
-    alert("item was added");
-    setCart = itemDisplay[0].itemDescription;
-    console.log("cart", cart);
-  };
+  const [items, setItems] = useState([]);
+  const itemDisplay = props.items.filter((item, key) => {
+    return item._id === props.match.params.id;
+  });
 
   function refreshPage(){ 
         window.location.reload(); 
@@ -48,13 +39,23 @@ function Description(props) {
         </div>
       </div>
       <Link to="/cart">
-        <button className="submitbutton" onClick={() => addToCart()}>
+        <button
+          className="submitbutton"
+          onClick={() => props.handleAdd(itemDisplay[0])}
+        >
           Add To Cart
         </button>
       </Link>
-      <button onClick={refreshPage}className="editbutton">Edit Post</button>
+      <button onClick={refreshPage} className="editbutton">
+        Edit Post
+      </button>
       <Link to="/">
-      <button onClick={() => handleDelete(itemDisplay[0]._id)} className="deletebutton">Delete Post</button>
+        <button
+          onClick={() => handleDelete(itemDisplay[0]._id)}
+          className="deletebutton"
+        >
+          Delete Post
+        </button>
       </Link>
     </div>
   );
