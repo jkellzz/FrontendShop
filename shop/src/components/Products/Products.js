@@ -14,27 +14,29 @@ import { getAllItems } from "../../services/api-helper";
 const Products = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [filtered, setFiltered] = useState([])
-  const [result, setResult] = useState('')
+  const [filtered, setFiltered] = useState([]);
+  const [result, setResult] = useState("");
 
   useEffect(() => {
     const makeAPICall = async () => {
       const resp = await getAllItems();
       setItems(resp);
       setIsLoading(false);
-      setFiltered(resp)
+      setFiltered(resp);
     };
     makeAPICall();
   }, []);
 
   useEffect(() => {
-    const searchResult = filtered.filter(results => results.item.toLowerCase().includes(result.toLowerCase()))
-    setItems(searchResult)
-  }, [result])
+    const searchResult = filtered.filter((results) =>
+      results.item.toLowerCase().startsWith(result.toLowerCase())
+    );
+    setItems(searchResult);
+  }, [result]);
 
-  const onChange = e => {
-    setResult(e.target.value)
-  }
+  const onChange = (e) => {
+    setResult(e.target.value);
+  };
 
   const list = items.map((item, key) => {
     return (
@@ -50,20 +52,21 @@ const Products = () => {
       </MDBCard>
     );
   });
-  
+
   return (
     <div>
       <div>
-        <input className='searchform'
-          type='text'
-          placeholder='Search here...'
+        <input
+          className="searchform"
+          type="text"
+          placeholder="Search here..."
           value={result}
           onChange={onChange}
         />
         <MDBCol className="cardcontainer">{list}</MDBCol>
       </div>
     </div>
-  )
+  );
 };
 
 export default Products;
