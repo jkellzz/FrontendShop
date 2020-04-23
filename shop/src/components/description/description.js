@@ -24,8 +24,13 @@ function Description(props) {
         console.log('handleDelete - json', json)
           const itemsArr = items.filter( item => item._id !== id)
           setItems(itemsArr)
+          refreshPage()
+            window.location.reload();
       }
 
+      function refreshPage(){ 
+        window.location.reload(); 
+    }
 
   return (
     <div>
@@ -48,7 +53,7 @@ function Description(props) {
           Add To Cart
         </button>
       </Link>
-      <button className="editbutton">Edit Post</button>
+      <button onClick={refreshPage}className="editbutton">Edit Post</button>
       <Link to="/">
       <button onClick={() => handleDelete(itemDisplay[0]._id)} className="deletebutton">Delete Post</button>
       </Link>
