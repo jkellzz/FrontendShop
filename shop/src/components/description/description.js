@@ -72,9 +72,11 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
         <label>Edit Review</label>
         <br />
         <input type="text" value={value} onChange={handleChange} />
+        <Link to='/'>
         <button onClick={handleUpdateReview} className="editbutton">
           Edit Reviews
         </button>
+        </Link>
       </form>
       <Link to="/">
         <button
