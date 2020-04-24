@@ -17,7 +17,7 @@ const Products = () => {
   const [filtered, setFiltered] = useState([]);
   const [result, setResult] = useState("");
 
-  console.log('Products - items', items)
+  console.log("Products - items", items);
 
   useEffect(() => {
     const makeAPICall = async () => {
@@ -65,7 +65,7 @@ const Products = () => {
           value={result}
           onChange={onChange}
         />
-        <MDBCol className="cardcontainer">{list}</MDBCol>
+        {!isLoading && <MDBCol className="cardcontainer">{list}</MDBCol>}
       </div>
     </div>
   );
