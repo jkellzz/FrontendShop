@@ -11,10 +11,11 @@ function Description(props) {
   const [value, setValue] = useState();
   const [review, setReview] = useState([]);
   const [reviewId, setReviewId] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const itemDisplay = props.items.filter((item, key) => {
     return item._id === props.match.params.id;
   });
-const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
+  const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
   function refreshPage() {
     window.location.reload();
   }
@@ -64,7 +65,8 @@ const [updateReview, setUpdateReview] = useState(itemDisplay[0].review[0]);
       <Link to="/cart">
         <button
           className="submitbutton"
-          onClick={() => props.handleAdd(itemDisplay[0])}>
+          onClick={() => props.handleAdd(itemDisplay[0])}
+        >
           Add To Cart
         </button>
       </Link>
