@@ -70,26 +70,32 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component | Description | 
 | --- | :---: |  
- 
+|Cart| shows items added to cart|
+|Checkout| Allows items in cart to be sent to a checkout form|
+|Description| Shows product description and other info|
+|History| Shows a viewing history of the user|
+|Home| Holds the search and all products|
+|Products| API pulled from our seed file|
+|Upload| allows user to upload a product|
 
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-|Layout| H | 6hrs |
-|MongoDB Connection| H | 1hrs |
-|Create Upload Product Page| H | 3hrs |
-|File Upload Component| H | 6hrs |
-|Display Product Lists In the Landing Page| H | 6hrs |
-|Product Detail Page| H | 4hrs |
-|Add to Cart Feature| H | 3hrs |
-|Cart Page| H | 4hrs |
-|Remove From Cart Button| H | 3hrs |
-|Styling| H | 10hrs |
-|Research| M | 5hrs |
-|Debugging| M | 10hrs |
-|Total| | 61hrs | 
+|Layout| H | 6hrs | 6hrs | 6hrs |
+|MongoDB Connection| H | 1hrs | 1hrs | 1hrs |
+|Create Upload Product Page| H | 3hrs | 3hrs | 3hrs |
+|File Upload Component| H | 6hrs | 6hrs | 6hrs |
+|Display Product Lists In the Landing Page| H | 6hrs | 6hrs | 6hrs |
+|Product Detail Page| H | 4hrs | 4hrs | 4hrs |
+|Add to Cart Feature| H | 3hrs | 3hrs | 3hrs |
+|Cart Page| H | 4hrs | 4hrs | 4hrs |
+|Remove From Cart Button| H | 3hrs | 3hrs | 3hrs |
+|Styling| H | 10hrs | 10hrs | 10hrs
+|Research| M | 5hrs | 5hrs | 5hrs |
+|Debugging| M | 10hrs | 10hrs | 10hrs |
+|Total| | 61hrs | 61hrs | 61hrs |
 
 
 
