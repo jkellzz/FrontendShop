@@ -60,6 +60,14 @@ function Description(props) {
               ? itemDisplay[0].review[0].reviews
               : "No reviews."}
           </p>
+          <h3>Condition:</h3>
+          <p>{itemDisplay[0].condition}</p>
+          <h3>Rating:</h3>
+          <p>
+            {itemDisplay[0].review[0]
+              ? itemDisplay[0].review[0].rating
+              : "No rating."}
+          </p>
         </div>
       </div>
       <Link to="/cart">
@@ -74,10 +82,10 @@ function Description(props) {
         <label>Edit Review</label>
         <br />
         <input type="text" value={value} onChange={handleChange} />
-        <Link to='/'>
-        <button onClick={handleUpdateReview} className="editbutton">
-          Edit Reviews
-        </button>
+        <Link to="/">
+          <button onClick={handleUpdateReview} className="editbutton">
+            Edit Reviews
+          </button>
         </Link>
       </form>
       <Link to="/">
