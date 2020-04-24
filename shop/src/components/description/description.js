@@ -63,7 +63,11 @@ function Description(props) {
           <h3>Condition:</h3>
           <p>{itemDisplay[0].condition}</p>
           <h3>Rating:</h3>
-          <p>{itemDisplay[0].review[0].rating}</p>
+          <p>
+            {itemDisplay[0].review[0]
+              ? itemDisplay[0].review[0].rating
+              : "No rating."}
+          </p>
         </div>
       </div>
       <Link to="/cart">
